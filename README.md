@@ -54,3 +54,8 @@ INDEL_DEL_GCACGGTGCGTGAGCGCA---------------GGTCCCCCGAGTCGCTGCAGTGGGAAC  1       
 GCACGGTGCGTGAGCGCAGGTTGTACTCAGCGGGGTCCCCCGAGCCACTGCAGTGGGAAC    2       0       0
 INDEL_INS_GCACGGTGCGTGAGCGCAGGTTGTACTCAGCGG(TGCGGGGCAGCATCAACAGATTCAAGACCAGCGACTACGTGAAAGAAGCCAAACAGCTGCTGAA)GGTCCCCCGAGCCGCTGCAGTGGGAAC        1       64      1
 ```
+Reads featuring small insertions/deletions and soft-clipping have possibly combined tags at the beginning (`INDEL_INS_`, `INDEL_DEL_` and `S_`). The columns are `sequence`, `number_of_reads`, `delta_frame` and `frameshift`. `delta_frame` keeps track of insertions and deletions in the region, and `frameshift` takes a 0 if those changes do not affect the reading frame and 1 otherwise.
+
+# get_genotype_bam
+
+This script 
