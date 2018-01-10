@@ -59,3 +59,14 @@ Reads featuring small insertions/deletions and soft-clipping have possibly combi
 # get_genotype_bam
 
 This script retrieves all the reads with a given sequence at the target region (as provided by loc_genotype) and writes them as a bam file.
+## Input
+>perl get_genotype_bam.pl bam_file chr from to type_file [samtools_executable=samtools]
+
+- `bam_file` must be indexed. 
+- type_file is the name of a file containing the expected sequences in the target region (`chr`:`from`-`to`) as provided by `loc_genotype`. Example,
+```
+  INDEL_DEL_GCACGGTGCGTGAGCGCAGGTTGTACTCAGC-GGGTCCCCCGAGCCGCTGCAGTGGGAAC
+  GCACGGTGCGTGAGCGCAGGTTGTACTCAGCGGGGTCCCCCGAGCCGCTGCAGTGGGGAC
+```
+## Output
+This `type_file` would create two bam files: bam_0.bam with 37 reads (containing the first target sequence) and bam_1.bam with 2 reads.
