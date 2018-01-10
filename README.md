@@ -58,4 +58,4 @@ Reads featuring small insertions/deletions and soft-clipping have possibly combi
 
 # get_genotype_bam
 
-This script 
+This script retrieves all the reads with a given sequence at the target region (as provided by loc_genotype) and writes them as a bam file.
