@@ -29,7 +29,7 @@ open (IN, "$SAMTOOLS view $bam '$chr:$f-$t' |");
 my $out = '';
 my $nlines = 0;
 my $types = {};
-my $topnlines = 100000;
+my $topnlines = 00000;
 while (<IN>){
   chomp;
   $nlines++;
@@ -111,7 +111,7 @@ sub get_bam_seq{
       }
     }
     elsif ($lcode eq 'S'){  #Soft clipping
-      $tpos += $ncode;
+      #$tpos += $ncode;
       $ins += $ncode;
       $result = 'S_' . $result;
       if ($tpos >= $from){

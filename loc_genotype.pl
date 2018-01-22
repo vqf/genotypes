@@ -95,7 +95,7 @@ sub get_bam_seq{
       }
     }
     elsif ($lcode eq 'S'){  #Soft clipping
-      $tpos += $ncode;
+      #$tpos += $ncode;
       $ins += $ncode;
       $result = 'S_' . $result;
       if ($tpos >= $from){
